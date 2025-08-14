@@ -1,0 +1,34 @@
+from ultralytics import YOLO
+import cv2
+
+# Load a pre-trained YOLOv8 model
+model = YOLO('yolov8n.pt')  # 'yolov8n.pt' is the nano version, good for quick examples
+
+# Load an image
+#image_path = 'path/to/your/image.jpg' # Replace with your image path
+image_path = 'medias/19007218479_03f8493049_o.jpg'
+img = cv2.imread(image_path)
+
+# Perform object detection
+results = model(img)
+
+# Iterate through detected objects and draw bounding boxes
+for r in results:
+    boxes = r.boxes  # Bounding boxes
+    for box in boxes:
+        x1, y1, x2, y2 = map(int, box.xyxy[0]) # Get coordinates
+        confidence = box.conf[0] # Confidence score
+        class_id = int(box.cls[0]) # Class ID
+        class_name = model.names[class_id] # Get class name
+
+        # Draw rectangle
+        cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2) # Green rectangle
+
+        # Put label
+        label = f'{class_name} {confidence:.2f}'
+        cv2.putText(img, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+# Display the image with detections
+cv2.imshow('YOLO Object Detection', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
