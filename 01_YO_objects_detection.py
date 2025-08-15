@@ -1,5 +1,15 @@
-from ultralytics import YOLO
+# YOLO -- Détection d'objets à partir d'une image
+
+import os
 import cv2
+from ultralytics import YOLO
+os.system("clear")
+
+def pause():
+    programPause = input("Appuyez sur la touche Retour pour continuer...")
+
+print("YOLO -- Détection d’objets à partir d’une image")
+pause()
 
 # Load a pre-trained YOLOv8 model
 model = YOLO('yolov8n.pt')  # 'yolov8n.pt' is the nano version, good for quick examples
