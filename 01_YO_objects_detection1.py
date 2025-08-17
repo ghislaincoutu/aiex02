@@ -12,7 +12,8 @@ print("YOLO -- Détection d’objets à partir d’une image")
 pause()
 
 # Load a pre-trained YOLOv8 model
-model = YOLO('yolov8n.pt')  # 'yolov8n.pt' is the nano version, good for quick examples
+#model = YOLO('yolov8n.pt')  # 'yolov8n.pt' is the nano version, good for quick examples
+model = YOLO('yolov9c.pt')
 
 # Load an image
 #image_path = 'path/to/your/image.jpg' # Replace with your image path
