@@ -11,14 +11,13 @@ sudo apt-get install python3
 sudo apt-get install python3-pip
 sudo apt-get install python3-venv
 sudo apt-get install python3-tk
-sudo apt-get install blender
-sudo apt-get install vlc
-sudo apt-get install pyqt5-dev-tools
 ```
 
-## Installation de FFmpeg
+## Installation des applications complémentaires
 ```sh
+sudo apt-get install vlc
 sudo apt-get install ffmpeg
+sudo apt-get install blender
 ```
 
 ## Création d’un environnement virtuel Python3
@@ -44,11 +43,51 @@ source /media/disk01/aiex02/ai02/bin/activate
 pip install --upgrade pip
 pip install ultralytics
 pip install opencv-python
-pip install lxml
-pip install labelImg
 ```
 
-## Commande pour démarrer LabelImg
+## Édition des jeux de données vidéo avec CVAT
+Il est possible d’utiliser l’application CVAT sur une machine virtuelle, à partir d’une image Docker (avec Docker Compose). Pour installer CVAT, au préalable il faut avoir installé et configuré Docker pour environnement Linux sur la machine virtuelle.
+
+### Procédure pour installer Docker Compose
 ```sh
-labelImg
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.39.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
+
+### Procédure pour installer CVAT
+```sh
+cd ~/Downloads
+git clone https://github.com/cvat-ai/cvat
+cd cvat
+docker compose up -d
+```
+
+### Procédure pour créer un utilisateur CVAT local
+```sh
+docker exec -it cvat_server bash -ic 'python3 ~/manage.py createsuperuser'
+```
+
+### Compte factice à créer
+```
+Username: user831
+Email: user831@debian831.local
+Password: debian831
+```
+
+L’application est accessible à partir de l’adresse URL suivante :
+```
+http://localhost:8080
+```
+
+### Commande pour démarrer CVAT
+```sh
+cd ~/Downloads/cvat
+docker compose up -d
+```
+
+### Commande pour arrêter CVAT
+```sh
+cd ~/Downloads/cvat
+docker compose down
 ```
