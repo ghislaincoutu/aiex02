@@ -68,7 +68,7 @@ docker compose up -d
 docker exec -it cvat_server bash -ic 'python3 ~/manage.py createsuperuser'
 ```
 
-### Compte factice à créer
+Compte factice à créer :
 ```
 Username: user831
 Email: user831@debian831.local
@@ -80,14 +80,9 @@ L’application est accessible à partir de l’adresse URL suivante :
 http://localhost:8080
 ```
 
-### Commande pour démarrer CVAT
+### Commande pour démarrer et arrêter CVAT
 ```sh
 cd ~/Downloads/cvat
 docker compose up -d
-```
-
-### Commande pour arrêter CVAT
-```sh
-cd ~/Downloads/cvat
 docker compose down
 ```
