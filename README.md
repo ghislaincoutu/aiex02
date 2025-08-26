@@ -57,7 +57,7 @@ docker-compose --version
 
 ### Procédure pour installer CVAT
 ```sh
-cd ~/Downloads
+cd /media/disk01/Docker/Compose/cvat
 git clone https://github.com/cvat-ai/cvat
 cd cvat
 docker compose up -d
@@ -82,7 +82,7 @@ http://localhost:8080
 
 ### Commande pour démarrer et arrêter CVAT
 ```sh
-cd ~/Downloads/cvat
+cd /media/disk01/Docker/Compose/cvat
 docker compose up -d
 docker compose down
 ```
