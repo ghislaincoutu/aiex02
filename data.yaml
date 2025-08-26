@@ -1,0 +1,6 @@
+path: /media/disk01/aiex02/dataset  # base path for images and labels
+train: images/train
+val: images/val
+
+nc: 2  # number of classes
+names: ['worker', 'cone']  # replace with your classes from obj.names
