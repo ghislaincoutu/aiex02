@@ -1,6 +1,9 @@
 ai02/
+dataset/
 logs/
+runs/
 00_temporary.py
 yolov8n.pt
 yolov9c.pt
 *.gif
+*.cache
