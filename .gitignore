@@ -3,3 +3,4 @@ logs/
 00_temporary.py
 yolov8n.pt
 yolov9c.pt
+*.gif
