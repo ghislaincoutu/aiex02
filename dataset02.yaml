@@ -1,0 +1,6 @@
+path: ./dataset02
+train: images/train
+val: images/val
+
+nc: 2  # Nombre de classes
+names: ['empty', 'icosphere']  # Nom des classes

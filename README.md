@@ -112,7 +112,7 @@ dataset01/
 └── data.yaml
 ```
 
-Le contenu du fichier `data.yalm` doit contenir les directives suivantes :
+Le contenu du fichier `dataset01.yalm` doit contenir les directives suivantes :
 ```sh
 path: ./dataset01
 train: images/train
@@ -123,8 +123,8 @@ names: ['worker', 'cone']  # Noms des classes
 ```
 
 ### Commande à exécuter
-Après avoir enregistré les images et les étiquettes dans le dossier `dataset01` et créé le fichier `data.yalm`, exécuter la commande suivante :
+Après avoir enregistré les images et les étiquettes dans le dossier `dataset01` et créé le fichier `dataset.yalm`, exécuter la commande suivante :
 ```sh
 yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=30 imgsz=640
 ```
-La commande va procéder à l’entraînement du jeu de doonnées vidéo et va enregistrer le résultat de l’entraînement dans le sous-répertoire `runs/detect/train`.
+La commande va procéder à l’entraînement du jeu de données vidéo et va enregistrer le résultat de l’entraînement dans le sous-répertoire `runs/detect/train`. À chaque entraînement, on peut supprimer le dossier `runs/detect/train` avant de recommencer.
