@@ -14,7 +14,7 @@ print("YOLO -- Détection d’objets à partir d’une vidéo")
 pause()
 
 # Set your YOLO output folder path
-folder_path = 'runs/detect/best_pred'  # Adjust as needed
+folder_path = 'runs_output/best_pred'  # Adjust as needed
 
 # Get all JPG images, sorted
 images = sorted([img for img in os.listdir(folder_path) if img.endswith(".jpg")])

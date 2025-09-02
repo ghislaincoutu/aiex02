@@ -16,8 +16,8 @@ model_best = 'runs/detect/train/weights/best.pt'
 model_last = 'runs/detect/train/weights/last.pt'
 
 # Output directories
-output_best = 'runs/detect/best_pred'
-output_last = 'runs/detect/last_pred'
+output_best = 'runs_output/best_pred'
+output_last = 'runs_output/last_pred'
 
 print("Running detection with best.pt...")
 pause()

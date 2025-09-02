@@ -11,7 +11,7 @@ print("YOLO -- Détection d’objets à partir d’une vidéo")
 pause()
 
 # Path to YOLO output images
-folder_path = 'runs/detect/best_pred'  # Adjust as needed
+folder_path = 'runs_output/best_pred'  # Adjust as needed
 output_gif_path = 'yolo_output.gif'  # Output filename
 
 # Get sorted list of .jpg files
