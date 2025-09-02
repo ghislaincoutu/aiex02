@@ -1,0 +1,11 @@
+ai02/
+dataset01/
+dataset02/
+runs/
+logs/
+
+00_temporary.py
+yolov8n.pt
+yolov9c.pt
+*.gif
+*.cache

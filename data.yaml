@@ -1,0 +1,6 @@
+path: ./dataset01
+train: images/train
+val: images/val
+
+nc: 1  # Nombre de classes
+names: ['worker']  # Nom des classes
