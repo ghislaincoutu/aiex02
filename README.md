@@ -131,4 +131,4 @@ La commande va procéder à l’entraînement du jeu de données vidéo et va en
 
 Un minimum de 30 époques (_epochs_) est requis pour que l’entraînement du jeu de données vidéo soit réussi.
 
-Pour que l’entraînement des jeu de données vidéo fonctionnent correctement, il faut que les étiquettes soient pleinement renseignées dès le départ. Si trois objets ont été annotés dans la vidéo, il faut donc que les étiquettes (les fichiers textes) contiennent trois lignes de coordonnées. Autrement un bogue se produit git lors de l’entraînement.
+Si une vidéo annotée contient un objet à détecter qui est hors scène au début de la vidéo, les première étiquettes seront incomplètes. Pour que l’entraînement des jeu de données vidéo fonctionne correctement, il faut que les étiquettes soient pleinement renseignées dès le départ. Si trois objets ont été annotés dans le jeu de données vidéo, il faut donc que les étiquettes (les fichiers textes) contiennent trois lignes de coordonnées. Autrement un bogue se produit lors de l’entraînement du jeu de données.
