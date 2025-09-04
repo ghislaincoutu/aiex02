@@ -10,9 +10,8 @@ def pause():
 print("YOLO -- Détection d’objets à partir d’une vidéo")
 pause()
 
-# Path to YOLO output images
-folder_path = 'runs_output/best_pred'  # Adjust as needed
-output_gif_path = 'yolo_output.gif'  # Output filename
+folder_path = 'runs_output/best_pred'
+output_gif_path = 'yolo_output.gif'
 
 # Get sorted list of .jpg files
 images = sorted([f for f in os.listdir(folder_path) if f.endswith('.jpg')])

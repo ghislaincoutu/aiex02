@@ -2,5 +2,5 @@ path: ./dataset02
 train: images/train
 val: images/val
 
-nc: 3  # Nombre de classes
-names: ['sphere', 'icosphere', 'cube']  # Nom des classes
+nc: 2  # Nombre de classes
+names: ['sphere', 'icosphere']  # Nom des classes

@@ -127,8 +127,9 @@ Après avoir enregistré les images et les étiquettes dans le dossier `dataset0
 ```sh
 yolo task=detect mode=train model=yolov8n.pt data=dataset01.yaml epochs=30 imgsz=640
 ```
-La commande va procéder à l’entraînement du jeu de données vidéo et va enregistrer le résultat de l’entraînement dans le sous-répertoire `runs/detect/train`. À chaque entraînement, on peut supprimer le dossier `runs/detect/train` avant de recommencer.
+La commande va procéder à l’entraînement du jeu de données vidéo et va enregistrer le résultat de l’entraînement dans le sous-répertoire `aiex02/runs/detect/train`. À chaque entraînement, on peut supprimer le dossier `aiex02/runs/detect/train` avant de recommencer.
 
 Un minimum de 30 époques (_epochs_) est requis pour que l’entraînement du jeu de données vidéo soit réussi.
 
-Si une vidéo annotée contient un objet à détecter qui est hors scène au début de la vidéo, les première étiquettes seront incomplètes. Pour que l’entraînement des jeu de données vidéo fonctionne correctement, il faut que les étiquettes soient pleinement renseignées dès le départ. Si trois objets ont été annotés dans le jeu de données vidéo, il faut donc que les étiquettes (les fichiers textes) contiennent trois lignes de coordonnées. Autrement un bogue se produit lors de l’entraînement du jeu de données.
+### Erreurs à éviter
+Si une vidéo annotée contient un objet à détecter qui est hors scène au début de la vidéo, les première étiquettes seront incomplètes. Pour que l’entraînement du jeu de données vidéo fonctionne correctement, il faut que les étiquettes soient pleinement renseignées dès le départ. Si trois objets ont été annotés dans le jeu de données vidéo, il faut donc que les étiquettes (les fichiers textes) contiennent trois lignes de coordonnées. Autrement un bogue se produit lors de l’entraînement du jeu de données.

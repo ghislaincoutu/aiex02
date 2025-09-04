@@ -10,25 +10,23 @@ def pause():
 print("YOLO -- Détection d’objets à partir d’une vidéo")
 pause()
 
-# --- Paths ---
-image_dir = 'dataset02/images/val'  # folder of test images
+image_dir = 'dataset02/images/val'
 model_best = 'runs/detect/train/weights/best.pt'
 model_last = 'runs/detect/train/weights/last.pt'
 
-# Output directories
 output_best = 'runs_output/best_pred'
 output_last = 'runs_output/last_pred'
 
-print("Running detection with best.pt...")
+print("Exécution de la détection avec l'option best.pt.")
 pause()
 yolo_best = YOLO(model_best)
 yolo_best.predict(source=image_dir, save=True, project='runs_output', name='best_pred', exist_ok=True)
 
-print("Running detection with last.pt...")
+print("Exécution de la détection avec l'option last.pt.")
 pause()
 yolo_last = YOLO(model_last)
 yolo_last.predict(source=image_dir, save=True, project='runs_output', name='last_pred', exist_ok=True)
 
-print("Detection complete. Check folders:")
-print(f"Best model predictions: {output_best}")
-print(f"Last model predictions: {output_last}")
+print("Détection complétée.")
+print(f"Meilleures prédictions du modèle enregistrées dans le dossier {output_best}")
+print(f"Dernières prédictions du modèle enregistrées dans le dossier {output_last}")
