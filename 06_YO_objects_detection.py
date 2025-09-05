@@ -3,6 +3,7 @@
 
 import os
 from PIL import Image
+os.system("clear")
 
 def pause():
     programPause = input("Appuyez sur la touche Retour pour continuer...")
@@ -11,7 +12,7 @@ print("YOLO -- Détection d’objets à partir d’une vidéo")
 pause()
 
 folder_path = 'runs_output/best_pred'
-output_gif_path = 'yolo_output.gif'
+output_gif_path = 'output/result.gif'
 
 # Get sorted list of .jpg files
 images = sorted([f for f in os.listdir(folder_path) if f.endswith('.jpg')])
